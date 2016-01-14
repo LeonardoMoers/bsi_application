@@ -5,19 +5,24 @@
 
 def quantidade_de_impares(valor_inicial,valor_final):
     ''' Determine a quantidade de números ímpares num intervalo'''
-#    return impares
+    lista = (valor_inicial, valor_final)
+    if int(valor_inicial) % 2 != 0:
+        return lista[1]
+    else:
+        return lista[0]
 
 def soma_dos_inteiros(valor1,valor2):
     ''' Calcule a soma dos números inteiros no intervalo entre 'valor1'
     e o 'valor2' ou vice-versa, considerando que podem ser informado
     números negativos ou fora de ordem. 
-    Ex: 1 e 5 ou 5 e 1, retorna 9'''
-#    return soma
+    Ex: 1 e 5 ou 5  e 1, retorna 9'''
+    return
 
 def potencia(base,expoente):
     ''' Calcule a 'base' elevada ao 'expoente' manualmente sem usar 
-    'base**expoente'. Considere base e expoente como inteiros positivos.''' 
-#    return pot
+    'base**expoente'. Considere base e expoente como inteiros positivos.'''
+    import math
+    return int(math.pow(base, expoente))
 
 def crescimento_populacional(populacao1,populacao2,crescimento1,
 crescimento2):

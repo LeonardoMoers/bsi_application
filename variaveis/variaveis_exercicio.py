@@ -3,65 +3,66 @@
 # Marco André <marcoandre@gmail.com>
 # Lista de exercícios 1
 
-def soma_dois_inteiros(numero_inteiro1,numero_inteiro2):
+def soma_dois_inteiros(inteiro1,inteiro2):
     ''' Recebe dois numeros inteiros, e retorna a sua soma'''
     #return soma
+    return int(inteiro1) + int(inteiro2)
 
 def metro_para_milimetros(metros):
     ''' Recebe um valor em metros, e retorna o valor em milimetros'''
-    #return milimetros
+    return int(metros*1000)
 
 def dias_para_segundos(dias,horas,minutos,segundos):
-    ''' Recebe uma data em dias com horas,minutos,segundos, e retorna 
+    ''' Recebe uma data em dias com horas,minutos,segundos, e retorna
     a data em segundos'''
-    #return segundos
+    return int(dias*24*3600 + horas*3600 + minutos*60 + segundos)
 
 def aumento_salarial(salario,porcentagem):
     ''' Recebe um salario e sua porcentagem de aumento, e retorna
     o novo salario'''
-#    return novo_salario
+    return round(salario + salario*porcentagem/100, 2)
 
 def preco_com_desconto(preco,desconto):
-    ''' Recebe um preço e sua porcentagem de desconto, e retorna 
+    ''' Recebe um preço e sua porcentagem de desconto, e retorna
     novo preço'''
-#    return novo_preco
+    return round(preco - preco*desconto/100, 2)
 
 def tempo_para_percorrer_uma_distancia(distancia,velocidade):
-    ''' Recebe uma distancia e a velocidade que percorreras essa 
+    ''' Recebe uma distancia e a velocidade que percorreras essa
     distancia, e retorna as horas que seriam gastas para percorrer
      em linha reta'''
-#    return tempo_horas
+    return round(distancia/float(velocidade), 2)
 
 def celsius_para_fahrenheit(celsius):
-    ''' Recebe uma temperatura em celsius, e retorna a temperatura 
+    ''' Recebe uma temperatura em celsius, e retorna a temperatura
     em fahrenheit'''
-#    return temperatura
+    return float(celsius*1.8+32)
 
 def fahrenheit_para_celsius(fahrenheit):
     ''' Recebe uma temperatura em fahrenheit, e retorna a temperatura
      em celcius'''
-#    return temperatura
+    return round(float((fahrenheit-32)/1.8), 2)
 
 def preco_aluguel_carro(dias,km):
-    ''' Recebe uma quantidade de dias que o carro foi alugado e a 
+    ''' Recebe uma quantidade de dias que o carro foi alugado e a
     quantidade de kilometros rodados, e retorna o valor a ser pago.
     1 dia: 60 reais mais R$ 0,15 por km rodado.'''
-#    return preco
+    return round(float(dias*60 + km * 0.15),2)
 
 def dias_perdidos_por_fumar(cigarros,anos):
     ''' Recebe uma quantidade de cigarros fumados por dia e a quantidade
      de anos que fuma, e retorna o total de dias perdidos, sabendo que
      cada cigarro reduz a vida em 10 minutos.'''
-#    return dias
+    return round(float((anos*365*cigarros)*10.0/60.0/24.0), 2)
 
 def dois_elevado_a_um_milhao():
-    ''' Calcula dois elevado a um milhão, e retorna a quantidade de 
+    ''' Calcula dois elevado a um milhão, e retorna a quantidade de
     algarismos'''
-#    return quantidade_numeros
+    return len(str(2**(10**6)))
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0
-total = 0 
+total = 0
 
 def test(obtido, esperado):
     global acertos, total
@@ -71,22 +72,22 @@ def test(obtido, esperado):
     else:
         prefixo = ' Passou.'
         acertos += 1
-    print ('%s Esperado: %s \tObtido: %s' % (prefixo, repr(esperado), 
+    print ('%s Esperado: %s \tObtido: %s' % (prefixo, repr(esperado),
         repr(obtido)))
 
 def main():
     print('Soma dois inteiros:')
-    test(soma_dois_inteiros(0,0), 0) 
-    test(soma_dois_inteiros(-1,0), -1) 
-    test(soma_dois_inteiros(1,1), 2) 
-    test(soma_dois_inteiros(0,-1), -1) 
-    test(soma_dois_inteiros(10,10), 20) 
+    test(soma_dois_inteiros(0,0), 0)
+    test(soma_dois_inteiros(-1,0), -1)
+    test(soma_dois_inteiros(1,1), 2)
+    test(soma_dois_inteiros(0,-1), -1)
+    test(soma_dois_inteiros(10,10), 20)
 
     print('Metros para milimetros:')
-    test(metro_para_milimetros(0), 0) 
-    test(metro_para_milimetros(1), 1000) 
-    test(metro_para_milimetros(1.8), 1800) 
-    test(metro_para_milimetros(1.81), 1810) 
+    test(metro_para_milimetros(0), 0)
+    test(metro_para_milimetros(1), 1000)
+    test(metro_para_milimetros(1.8), 1800)
+    test(metro_para_milimetros(1.81), 1810)
 
     print('Dias,horas,minutos e segundos para segundos:')
     test(dias_para_segundos(0,0,0,1), 1)
