@@ -144,11 +144,14 @@ def tinta(metros_pintar):
     e retorna a quantidade de latas de tinta a comprar.
     A cobertura da tinta é de 3 metros por litro de tinta
     Cada lata possui 18 litros de tinta'''
-    litros_tinta = metros_pintar/3
+    litros_tinta = float(metros_pintar/3)
     if litros_tinta <= 18:
         return 1
     else:
-        latas_tinta = litros_tinta/18
+        latas_tinta = float(litros_tinta/18)
+        if latas_tinta >= round(latas_tinta):
+            return round(latas_tinta) + 1
+        else: return round(latas_tinta);
 
 
 def acrescimo_nota_bb(nota_sozinho,nota_com_ajuda):
@@ -156,6 +159,11 @@ def acrescimo_nota_bb(nota_sozinho,nota_com_ajuda):
     depois que o big brother ajudou, e retorna o acrecimo que o big
      brother recebera em sua nota pela ajuda.
      O acréscimo é de 1/4 da diferença das notas, se for positivo'''
+    import math
+    if nota_com_ajuda > nota_sozinho:
+        return round(float(nota_com_ajuda - nota_sozinho) * float(1.0/4.0), 2)
+    else:
+        return 0
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0

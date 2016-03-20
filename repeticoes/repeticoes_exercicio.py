@@ -5,11 +5,7 @@
 
 def quantidade_de_impares(valor_inicial,valor_final):
     ''' Determine a quantidade de números ímpares num intervalo'''
-    lista = (valor_inicial, valor_final)
-    if int(valor_inicial) % 2 != 0:
-        return lista[1]
-    else:
-        return lista[0]
+    
 
 def soma_dos_inteiros(valor1,valor2):
     ''' Calcule a soma dos números inteiros no intervalo entre 'valor1'
