@@ -1,2 +1,4 @@
-# Treinamento
-Treinamento python with django para a equipe de desenvolvimento da OD Digital da Onda Dura.
+# Exercises python
+Lists of exercises that were passed for develiver teacher.
+
+## Pure python ...
