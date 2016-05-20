@@ -151,7 +151,8 @@ def tinta(metros_pintar):
         latas_tinta = float(litros_tinta/18)
         if latas_tinta >= round(latas_tinta):
             return round(latas_tinta) + 1
-        else: return round(latas_tinta);
+        else:
+            return round(latas_tinta);
 
 
 def acrescimo_nota_bb(nota_sozinho,nota_com_ajuda):
@@ -159,7 +160,6 @@ def acrescimo_nota_bb(nota_sozinho,nota_com_ajuda):
     depois que o big brother ajudou, e retorna o acrecimo que o big
      brother recebera em sua nota pela ajuda.
      O acréscimo é de 1/4 da diferença das notas, se for positivo'''
-    import math
     if nota_com_ajuda > nota_sozinho:
         return round(float(nota_com_ajuda - nota_sozinho) * float(1.0/4.0), 2)
     else:
