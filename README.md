@@ -1,4 +1,4 @@
 # Exercises python
-Lists of exercises that were passed for develiver teacher.
+Lists of exercises that were passed for deliver teacher.
 
 ## Pure python ...
