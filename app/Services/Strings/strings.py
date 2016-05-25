@@ -122,12 +122,6 @@ def é_chato(numero):
 
 def é_número_válido(numero):
     '''Um número é válido se não é azarado, a soma é par e não é chraato.'''
-    # for n in range(len(numero) - 1):
-    #     if numero[n] == numero[n + 1] or numero[0] == numero[len(numero)-1]:
-    #         return bool(False)
-    #     elif sum(int(n) for n in numero) % 2 == 0:
-    #         return bool(True)
-    # return bool(True)
 
 def ponteironuloville(telefones):
     '''Na pacata vila campestre de Ponteironuloville, todos os telefones 
