@@ -1,4 +1,4 @@
 # Exercises python
-Lists of exercises that were passed for develiver teacher.
+Using exercices passed for teacher to learn and apply in micro-frameworks like Flask
 
 ## Pure python ...
